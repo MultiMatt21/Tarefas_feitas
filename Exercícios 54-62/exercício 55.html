@@ -26,14 +26,14 @@
             document.getElementById('numeros').textContent = `Os números digitados foram ${numeros}`
             if(isNaN(numero1) || isNaN(numero2)){
                 document.getElementById('nan').textContent = "Por favor insira um número"
-                document.getElementById('nan').textContent = "Por favor insira um número"
+               
                 return
             }
             if(numero1>=numero2){
-                document.getElementById('resultado1').textContent = `O número maior é ${numero1}`
+                document.getElementById('resultado1').innerHTML = `O número maior é <span style="color:blue">${numero1}</span>`
                 
             }else{
-                document.getElementById('resultado1').textContent = `O número maior é ${numero2}`
+                document.getElementById('resultado1').innerHTML = `O número maior é <span style="color:blue">${numero2}`
                 
             }
             

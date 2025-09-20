@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 54</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <h1>exercício 54</h1>
+    <label for="numero">Coloque aqui o seu número</label> 
+    <input type="text" id="numero">
+    <button id="btn">Enviar</button>
+    <p id="texto"></p>
+    <p id="resultado"></p>
+    <p id="texto2"></p>
+
+
+    <script>
+    document.getElementById('btn').addEventListener('click', function(){
+        
+        let numero = Number(document.getElementById('numero').value)
+        if(numero<=0){
+            alert('por favor insira um número diferente e maior que zero')
+            return
+        }
+        if(isNaN(numero)){
+            document.getElementById('resultado').textContent = "Por favor insira um número"
+            return
+        }
+        if (numero % 2 == 0){
+            document.getElementById('resultado').innerHTML = `O número digitado é <span style="color: green">${numero}</span> par`
+            
+            
+        }else{
+            document.getElementById('resultado').innerHTML = `O número digitado é <span style="color: red">${numero}</span> impar`
+            
+            
+    }})
+    </script>
+</body>
+</html>

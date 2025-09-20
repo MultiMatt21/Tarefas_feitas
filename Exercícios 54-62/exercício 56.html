@@ -23,9 +23,9 @@
             let media = (Number(numero1) + Number(numero2)) / 2
             document.getElementById('notas').textContent = `O resultado de suas duas provas foram ${numero1} e ${numero2}`
             if(media >= 5){
-                document.getElementById('resultado').textContent = "Aprovado"
+                document.getElementById('resultado').innerHTML = "<span style='color:red'>Aprovado</span>"
             }else{
-                document.getElementById('resultado').textContent = "Reprovado"
+                document.getElementById('resultado').innerHTML = "<span style='color:red'>Reprovado</span>"
             }
         })
     </script>
