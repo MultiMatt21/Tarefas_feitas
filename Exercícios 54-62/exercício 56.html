@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 56</title>
+</head>
+<body>
+    <h1>Exercício 56</h1>
+    <hr>
+    <label for="numero1">Insira a primeira nota</label><br>
+    <input type="text" name="" id="numero1"><br>
+    <label for="numero2">Insira a segunda nota</label><br>
+    <input type="text"  id="numero2"><br>
+    <button id="btn">Enviar</button>
+    <p id="resultado"></p>
+    <p id="notas"></p>
+    
+    <script>
+        document.getElementById('btn').addEventListener('click',function(){
+            let numero1 = document.getElementById('numero1').value
+            let numero2 = document.getElementById('numero2').value
+            let media = (Number(numero1) + Number(numero2)) / 2
+            document.getElementById('notas').textContent = `O resultado de suas duas provas foram ${numero1} e ${numero2}`
+            if(media >= 5){
+                document.getElementById('resultado').textContent = "Aprovado"
+            }else{
+                document.getElementById('resultado').textContent = "Reprovado"
+            }
+        })
+    </script>
+</body>
+</html>

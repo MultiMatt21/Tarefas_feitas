@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 54</title>
+    <style>
+        .par{
+            color:green ;
+        }
+        .impar{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>exercício 54</h1>
+    <label for="numero">Coloque aqui o seu número</label> 
+    <input type="text" id="numero">
+    <button id="btn">Enviar</button>
+    <p id="texto"></p>
+    <p id="resultado"></p>
+    <p id="texto2"></p>
+
+
+    <script>
+       document.getElementById('btn').addEventListener('click', function(){
+        let numero = Number(document.getElementById('numero').value)
+        if(isNaN(numero)){
+            document.getElementById('resultado').textContent = "Por favor insira um número"
+            return
+        }
+        if(numero % 2 == 0){
+        
+            document.getElementById('resultado').textContent =  ` ${numero} ` 
+            document.getElementById ('texto') . textContent = `O numero é`
+            document.getElementById('resultado').classList.add('par')
+            document.getElementById ('texto2') . textContent = `par.`
+           
+        }else{
+            document.getElementById('resultado').textContent = `O número ${numero} é impar` 
+            document.getElementById('resultado').classList.add('impar')
+        }
+       })
+    </script>
+</body>
+</html>

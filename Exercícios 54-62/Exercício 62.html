@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 62</title>
+</head>
+<body>
+    <h1>Exercício 62</h1>
+    <hr>
+    <label for="numero">Insira um número</label>
+    <input type="text" id="numero">
+    <button id="btn">Enviar</button>
+    <p id="resultado"></p>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function(){
+            let número = document.getElementById('numero').value
+            let raizquadrada = Math.sqrt(número)
+            let raizcubica = Math.cbrt(número)
+            let raizsetima = Math.pow(número, 1/7)
+            if(isNaN(número)){
+                document.getElementById('resultado').textContent = "Por favor insira um número"
+                return
+            }
+            if(número < 0){
+                alert("Por favor insira um número positivo")
+                return
+            }
+            if(número % 2 == 0){
+                document.getElementById('resultado').textContent = `O número digitado é ${número} par.\nEle ao quadrado é ${Math.pow(número, 2)}.\nEle ao cubo é ${Math.pow(número, 3)}. \n ele à sétima é ${Math.pow(número, 7)}`
+            }else{
+                document.getElementById('resultado').textContent = `O número digitado é ${número} impar. Sua raíz quadrada é ${raizquadrada.toFixed(2)}. Sua raíz cubica é ${raizcubica.toFixed(2)}. Sua raíz setima é ${raizsetima.toFixed(2)}`
+            }
+        })
+    </script>
+
+    
+</body>
+</html>

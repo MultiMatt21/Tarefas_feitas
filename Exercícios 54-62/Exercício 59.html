@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 59</title>
+</head>
+<body>
+    <h1>Exercício</h1>
+    <hr>
+    <label for="numero">Insira um número</label>
+    <input type="text" name="" id="número">
+    <button id="btn">Enviar</button>
+    <p id="resultado"></p>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function(){
+            let número = document.getElementById('número').value
+            if(isNaN(número)){
+                document.getElementById('resultado').textContent = "Por favor insira um número"
+                return
+            }
+            if(número % 2 == 0){
+                document.getElementById('resultado').textContent = `O número digitado é par e seu valor elevado ao quadrado é ${Math.pow(número, 2)}`
+            }else{
+                document.getElementById('resultado').textContent = `O número digitado é impar e seu valor elevado ao cubo é ${Math.pow(número, 3)}`
+            }
+        })
+    </script>
+    
+</body>
+</html>

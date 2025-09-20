@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 48</title>
+</head>
+<body>
+    <h1>exercício 48</h1>
+    <hr><br>
+    <label for="compra">Valor da compra</label>
+    <input type="number" id="compra">
+    <button id="btn">Enviar</button>
+    <p id="resposta1">10% de desconto</p>
+    <p id="resposta2">20% de desconto</p>
+    <p id="resposta3">30% de desconto</p>
+    <p id="resposta4">50% de desconto</p>
+
+
+
+    <script>
+        let botao = document.getElementById("btn")
+
+        botao.addEventListener('click', function(){
+            // Desconto 10%
+            let compra = parseInt(document.getElementById("compra").value)
+            let calc1 = compra*0.1
+            let desconto1 =compra-calc1
+            document.getElementById("resposta1").innerHTML = `O valor da compra com 10% de desconto é: ${desconto1}`
+            // desconto 20%
+            let desconto2 = compra*0.2
+            let calc2 = compra-desconto2
+            document.getElementById("resposta2").innerHTML = `O valor da compra com 20% de desconto é: ${calc2}`
+            // desconto 30%
+            let desconto3 = compra*0.3
+            let calc3 = compra-desconto3
+            document.getElementById("resposta3").innerHTML = `O valor da compra com 30% de desconto é: ${calc3}`
+            // desconto 50%
+            let desconto4 = compra*0.5
+            let calc4 = compra-desconto4
+            document.getElementById("resposta4").innerHTML = `O valor da compra com 50% de desconto é: ${calc4}`
+
+
+        })
+    </script>
+</body>
+</html>

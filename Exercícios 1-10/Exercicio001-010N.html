@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercícios JavaScript</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .exercicio { margin-bottom: 20px; }
+        button { margin-top: 5px; }
+        .output { margin-top: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h2>Exercícios</h2>
+    <p>Utilizando o comando <b>console.log</b>, <b>alert</b> e <b>document.getElementById</b> com <b>innerHTML</b> faça os exercícios a seguir:</p>
+
+    <div class="exercicio">
+        <b>Exercício 1:</b>
+        <p>Exiba a mensagem <b>"Olá, mundo!"</b>.</p>
+        <button onclick="ex1()">Executar</button>
+        <div id="out1" class="output"></div>
+    </div>
+
+    <div class="exercicio">
+        <b>Exercício 2:</b>
+        <p>Exiba o seu nome.</p>
+        <button onclick="ex2()">Executar</button>
+        <div id="out2" class="output"></div>
+    </div>
+
+    <div class="exercicio">
+        <b>Exercício 3:</b>
+        <p>Exiba a soma de dois números.</p>
+        <button onclick="ex3()">Executar</button>
+        <div id="out3" class="output"></div>
+    </div>
+
+    <div class="exercicio">
+        <b>Exercício 4:</b>
+        <p>Exiba o dobro de um número.</p>
+        <button onclick="ex4()">Executar</button>
+        <div id="out4" class="output"></div>
+    </div>
+
+    <div class="exercicio">
+        <b>Exercício 5:</b>
+        <p>Exiba a idade de um dos seus colegas.</p>
+        <button onclick="ex5()">Executar</button>
+        <div id="out5" class="output"></div>
+    </div>
+
+    <div class="exercicio">
+        <b>Exercício 6:</b>
+        <p>Exiba a mensagem <b>"Estou aprendendo JavaScript!"</b> 5 vezes.</p>
+        <button onclick="ex6()">Executar</button>
+        <div id="out6" class="output"></div>
+    </div>
+
+    <div class="exercicio">
+        <b>Exercício 7:</b>
+        <p>Exiba a sequência de números de 1 a 10.</p>
+        <button onclick="ex7()">Executar</button>
+        <div id="out7" class="output"></div>
+    </div>
+
+    <script>
+        function ex1() {
+            alert("Olá, mundo!");
+            console.log("Olá, mundo!");
+            document.getElementById("out1").innerHTML = "Olá, mundo!";
+        }
+        function ex2() {
+            let nome = "Matheus";
+            alert(nome);
+            console.log(nome);
+            document.getElementById("out2").innerHTML = nome;
+        }
+        function ex3() {
+            let a = 2, b = 3;
+            let soma = a + b;
+            alert("Soma: " + soma);
+            console.log("Soma:", soma);
+            document.getElementById("out3").innerHTML = "Soma: " + soma;
+        }
+        function ex4() {
+            let num = 5;
+            let dobro = num * 2;
+            alert("Dobro: " + dobro);
+            console.log("Dobro:", dobro);
+            document.getElementById("out4").innerHTML = "Dobro: " + dobro;
+        }
+        function ex5() {
+            let idadeColega = 22;
+            alert("Idade do colega: " + idadeColega);
+            console.log("Idade do colega:", idadeColega);
+            document.getElementById("out5").innerHTML = "Idade do colega: " + idadeColega;
+        }
+        function ex6() {
+            let msg = "Estou aprendendo JavaScript!";
+            let resultado = "";
+            for(let i=0; i<5; i++) {
+                alert(msg);
+                console.log(msg);
+                resultado += msg + "<br>";
+            }
+            document.getElementById("out6").innerHTML = resultado;
+        }
+        function ex7() {
+            let seq = "";
+            for(let i=1; i<=10; i++) {
+                seq += i + " ";
+            }
+            alert("Sequência: " + seq.trim());
+            console.log("Sequência:", seq.trim());
+            document.getElementById("out7").innerHTML = seq.trim();
+        }
+    </script>
+</body>
+</html>

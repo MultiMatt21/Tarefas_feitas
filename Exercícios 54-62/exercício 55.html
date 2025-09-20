@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 55</title>
+</head>
+<body>
+    <h1>exercício 55</h1>
+    <label for="numero1">Digite seu número</label><br>
+    <input type="text" id="numero1"><br>
+    <label for="numero2">Digite seu número</label><br>
+    <input type="text" id="numero2"><br>
+    <button id="btn">Enviar</button>
+    <p id="nan"></p>
+    <p id="resultado1"></p>
+    <p id="resultado2"></p>
+    <p id="numeros"></p>
+
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function(){
+            let numero1 = document.getElementById('numero1').value
+            let numero2 = document.getElementById('numero2').value
+            let numeros = numero1 + " e " + numero2
+            document.getElementById('numeros').textContent = `Os números digitados foram ${numeros}`
+            if(isNaN(numero1) || isNaN(numero2)){
+                document.getElementById('nan').textContent = "Por favor insira um número"
+                document.getElementById('nan').textContent = "Por favor insira um número"
+                return
+            }
+            if(numero1>=numero2){
+                document.getElementById('resultado1').textContent = `O número maior é ${numero1}`
+                
+            }else{
+                document.getElementById('resultado1').textContent = `O número maior é ${numero2}`
+                
+            }
+            
+
+        })
+    </script>
+</body>
+</html>

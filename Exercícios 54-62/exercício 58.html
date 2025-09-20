@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 58</title>
+</head>
+<body>
+    <h1>Exercício 58</h1>
+    <label for="numero1">Nota1</label><br>
+    <input type="number" id="numero1"><br>
+    <label for="numero2">nota2</label><br>
+    <input type="number" id="numero2"><br>
+    <label for="numero3">nota3</label><br>
+    <input type="number" id="numero3"><br>
+    <button id="btn">Enviar</button>
+    <p id="resultado"></p>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function(){
+            let numero1 = document.getElementById('numero1').value
+            let numero2 = document.getElementById('numero2').value
+            let numero3 = document.getElementById('numero3').value
+
+            if((Number(numero1) + Number(numero2) + Number(numero3))/3 >= 7.50){
+                document.getElementById('resultado').textContent = "Aprovado"
+            }else{
+                document.getElementById('resultado').textContent = "Reprovado"
+            }
+
+         
+        })
+    </script>
+    
+</body>
+</html>

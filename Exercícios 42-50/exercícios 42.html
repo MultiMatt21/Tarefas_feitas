@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>42</h1>
+    <label for="idade">Qual sua idade</label><br>
+    <input type="text" id="idade">
+    <button id="btn">Enviar</button>
+    <p id="resposta">Sua idade em dias aparecerá aqui</p>
+
+
+    <script>
+      let botão = document.getElementById("btn")
+
+      botão.addEventListener('click', function(){
+        let idade = parseInt(document.getElementById("idade").value)
+        let dias = idade*365 
+       
+        document.getElementById("resposta").innerHTML = `Sua idade em dias é: ${dias}`
+      })
+    </script>
+</body>
+</html>

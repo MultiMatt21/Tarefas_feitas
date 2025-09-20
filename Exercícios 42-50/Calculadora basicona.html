@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Study</title>
+</head>
+<body>
+    <label for="primeironumero">Digite seu primeiro número</label><br>
+    <input type="text" id="primeironumero"><br>
+    <label for="segundonumero" >Digite seu segundo número</label><br>
+    <input type="text" id="segundonumero">
+    <button id="btncalc">Calcular</button>
+
+    <p id="Resultado">Seu resultado aparecerá aqui</p>
+    
+    <script>
+        function somar(a,b){
+            return a + b
+        }
+        const botao = document.getElementById("btncalc");
+
+     
+        botao.addEventListener("click", function(){
+            const primeiro = parseInt(document.getElementById("primeironumero").value);
+            const segundo = parseInt(document.getElementById("segundonumero").value);
+            const resultado = somar(primeiro,segundo);
+            document.getElementById("Resultado").innerHTML = `Seu resultado é: ${resultado}`;
+        })
+
+        
+        
+    
+       
+    
+        
+        
+    </script>
+</body>
+</html>

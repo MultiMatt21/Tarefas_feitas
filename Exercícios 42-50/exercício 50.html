@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 50</title>
+</head>
+<body>
+    <h1>exercício 50</h1>
+    <label for="valor">valor da conta</label><br>
+    <input type="text" id="valor"><br>
+    <label for="gorgeta">porcentagem</label><br>
+    <input type="text" id="gorgeta"><br>
+    <button id="btn">Enviar</button>
+    <pid id="resposta1"></p>
+    
+
+
+    <script>
+        let botao = document.getElementById("btn")
+
+        botao.addEventListener('click', function(){
+            let valor = parseInt(document.getElementById("valor").value)
+            let gorgeta = parseInt(document.getElementById("gorgeta").value)
+            let calc = valor*(gorgeta/100)
+            let valortotal= calc+valor
+            document.getElementById("resposta1").innerHTML = `Sua conta deu ${valor}, a gorgeta será ${calc} então o total será ${valortotal}`
+            
+        })
+    </script>
+</body>
+</html>

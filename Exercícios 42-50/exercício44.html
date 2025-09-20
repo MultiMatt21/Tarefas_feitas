@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 44</title>
+</head>
+<body>
+    <h1>exercício 44</h1>
+    <label for="temp">Qual temperatura em Celsius</label><br>
+    <input type="text" id="temp"><br>
+    <button id="btn">Enviar</button>
+    <p id="resultado">Seu resultado aparecerá aqui</p>
+
+    <script>
+     let botão = document.getElementById("btn")
+     botão.addEventListener('click', function(){
+         let temp = parseInt(document.getElementById("temp").value)
+         let tempf = temp*1.8+32
+         document.getElementById("resultado").innerHTML = `Sua temperatura em fahrenheit é ${tempf}`
+         console.log(tempf)
+     })
+    </script>
+</body>
+</html>

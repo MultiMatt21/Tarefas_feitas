@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 43</title>
+</head>
+<body>
+    <h1>43</h1>
+    <hr>
+    <label for="energiagasta">Quanto de energia fora gasta ?</label><br>
+    <input type="text" id="energiagasta">
+    <button id="btn">enviar</button>
+    <p id="valquilowatt">Valor de 1 quilowatt</p>
+    <p id="val_total">Valor val_total</p>
+    <p id="val_disc">Valor com disconto de 10%</p>
+    
+    <script>
+        let btn = document.getElementById("btn")
+        let saláriomin = 1518/7
+
+        btn.addEventListener('click',function(){
+            let energiatotal = parseInt(document.getElementById("energiagasta").value)
+            let cadaquilowatt = energiatotal/saláriomin
+            document.getElementById("valquilowatt").innerHTML= `O valor de cada quilowatt será ${cadaquilowatt.toFixed(2)} reais`
+            let valtotal = energiatotal*saláriomin 
+            document.getElementById("val_total").innerHTML = `O valor total a ser pago será ${valtotal.toFixed(2)}reais`
+            let val_disc= valtotal*0.1 
+            document.getElementById("val_disc").innerHTML = `O valor com desconto de 10% será ${val_disc.toFixed(2)} reais`
+            
+
+            
+
+
+        })
+
+    </script>
+</body>
+</html>
