@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1-10</title>
+</head>
+<body>
+    <h1>Exercício 1</h1>
+    <br>
+    <p>Olá mundo</p>
+    <button onclick="alert('Olá mundo')">Ação</button>
+    <hr>
+    <h1>Exercício 2</h1>
+    <br>
+    <p>Um programa que exibe meu nome</p>
+    <button onclick="alert('Matheus')">Ação</button>
+    <hr>
+    
+    <h1>Exercício 3</h1>
+    <p>Exiba a soma de dois números</p>
+    <button id="btn3">ação</button>
+    <p id="resposta3">Seu número aparecerá aqui </p>
+    <hr>
+
+    <h1>Exercício 4</h1>
+    <p>Crie um programa que exiba o dobro de um número</p>
+    <button id="btn4">Ação</button>
+    <p id="resposta4">Sua resposta aparecerá aqui</p>
+    <hr>
+
+    <h1>Exercício 5</h1>
+    <p>Escreva a idade de um dos seus colegas</p>
+    <button id="btn5">Ação</button>
+    <p id="resposta5">A idade do colega aparecerá aqui</p>
+    <hr>
+
+    <h1>Exercício 6</h1>
+    <p>Escreva um programa que exiba a mensagem "Estou aprendendo JavaScript</p>
+    <button id="btn6">Ação</button> 
+    <p id="resposta6">A mensagem aparecerá aqui</p>
+    <p id="resposta6_2"></p>  
+    <p id="resposta6_3"></p>  
+    <p id="resposta6_4"></p>  
+    <p id="resposta6_5"></p>  
+    <hr>
+
+    <h1>Exercício 7</h1>
+    <p>Crie um programa que exiba a sequÊncia de números 1 a 10</p>
+    <button id="btn7">Ação</button>
+    <p id="resposta7">A mensagem aparecerá aqui</p>
+    <hr>
+
+    <h1>Exercício 8</h1>
+    <p>Escreva um programa que exiba a mensagem "Feliz Ano Novo!" 3 vezes</p>
+    <button id="btn8">Ação</button>
+    <p id="resposta8">A mensagem aparecerá aqui</p>
+    <p id="resposta8_2">A mensagem aparecerá aqui</p>
+    <p id="resposta8_3">A mensagem aparecerá aqui</p>
+    <hr>
+
+    <h1>Exercício 9</h1>
+    <p>Exiba o cubo de um número</p>
+    <button id="btn9">Ação</button>
+    <p id="resposta9">Sua resposta aparecerá aqui</p>
+    <hr>
+
+    <h1>Exercício 10</h1>
+    <p>Escreva um programa que exiba seu nome, sobrenome e idade</p>
+    <button id="btn10">Ação</button>
+    <p id="resposta10">Sua resposta aparecerá aqui</p>
+    <hr>
+
+
+    <script>
+        btn3.addEventListener('click', function(){
+            
+            let num1 = parseInt(prompt("Digite o primeiro número"))
+            let num2 = parseInt(prompt("Digite o segundo número"))
+            let soma = num1+num2
+            document.getElementById("resposta3").innerHTML = `A soma de ${num1} e ${num2} é ${soma}`
+            console.log(soma)
+        })
+
+        btn4.addEventListener('click', function(){
+            let num = parseInt(prompt("Digite um número"))
+            let dobro = num*2
+            document.getElementById("resposta4").innerHTML = `O dobro de ${num} é ${dobro}`
+            console.log(dobro)
+        })
+
+        btn5.addEventListener('click', function(){
+            let idade = parseInt(prompt("Digite a idade do colega"))
+            document.getElementById("resposta5").innerHTML = `A idade do colega é ${idade}`
+            console.log(idade)
+        })
+
+        btn6.addEventListener('click', function(){
+            document.getElementById("resposta6").innerHTML = "Estou aprendendo JavaScript"
+            document.getElementById("resposta6_2").innerHTML = "Estou aprendendo JavaScript"
+            document.getElementById("resposta6_3").innerHTML = "Estou aprendendo JavaScript"
+            document.getElementById("resposta6_4").innerHTML = "Estou aprendendo JavaScript"
+            document.getElementById("resposta6_5").innerHTML = "Estou aprendendo JavaScript"
+            // document.getElementById("resposta6").innerHTML = "Estou aprendendo JavaScript"
+
+            alert("Estou aprendendo JavaScript")
+            alert("Estou aprendendo JavaScript")
+            alert("Estou aprendendo JavaScript")
+            alert("Estou aprendendo JavaScript")
+            alert("Estou aprendendo JavaScript")
+
+            console.log("Estou aprendendo JavaScript")
+            console.log("Estou aprendendo JavaScript")
+            console.log("Estou aprendendo JavaScript")
+            console.log("Estou aprendendo JavaScript")
+            console.log("Estou aprendendo JavaScript")
+        })
+
+        btn7.addEventListener('click', function(){
+            document.getElementById("resposta7").innerHTML = "1 2 3 4 5 6 7 8 9 10"
+            console.log("1 2 3 4 5 6 7 8 9 10")
+        })
+
+        btn8.addEventListener('click',function(){
+            document.getElementById("resposta8").innerHTML="Feliz ano novo"
+            document.getElementById("resposta8_2").innerHTML="Feliz ano novo"
+            document.getElementById("resposta8_3").innerHTML="Feliz ano novo"
+        })
+        btn9.addEventListener('click',function(){
+            let num = parseInt(prompt("Digite um número"))
+            let cubo = Math.pow(num,3)
+            document.getElementById("resposta9").innerHTML = `O cubo de ${num} é ${cubo}`
+            console.log(cubo)
+        })
+
+        btn10.addEventListener('click',function(){
+            let nome = prompt("Digite seu nome")
+            let sobrenome = prompt("Digite seu sobrenome")
+            let idade = prompt("Digite sua idade")
+            document.getElementById("resposta10").innerHTML = `Seu nome é ${nome}, seu sobrenome é ${sobrenome} e sua idade é ${idade}`
+        })
+    </script>
+</body>
+</html>
