@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+</head>
+<body>
+    <h1>Exercício 14</h1>
+    <p>Crie uma aplicação que receba duas variáveis do tipo inteiro, exiba os valores digitadose posteriormente exiba a primeira variável acrescida de uma unidade e a segundavariável decrescida de uma unidade.</p>
+    <br>
+    <p id="resposta1">Sua resposta aparecerá aqui</p>
+    <p id="resposta2">Sua resposta aparecerá aqui</p>
+    <p id="resposta3">Sua resposta aparecerá aqui</p>
+    
+    <script>
+        let num1 = parseInt(prompt("Digite o primeiro número"))
+        let num2 = parseInt(prompt("Digite o segundo número"))
+        let soma = parseInt(prompt("Digite um número para somar com o primeiro número"))
+        let subtrai = parseInt(prompt("Digite um número para subtrair com o segundo número"))
+
+        document.getElementById("resposta1").innerHTML = `Os valores digitados foram ${num1} e ${num2}`
+        document.getElementById("resposta2").innerHTML = `A soma com uma variável do primeiro número será ${num1+soma}`
+        document.getElementById("resposta3").innerHTML = `A subtração com uma variável do segundo número será ${num2-subtrai}`
+
+    </script>
+    
+</body>
+</html>
