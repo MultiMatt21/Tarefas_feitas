@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício 21</h1>
+<label for="sorvete">Quantos sorvetes foram vendidos?</label>
+<input type="number" id="sorvete">
+<button id="btn">Calcular</button>
+<p id="resposta">A sua resposta aparecerá aqui</p>
+
+
+    <script>
+            const preco = 5.00;
+            
+            btn.addEventListener('click',function(){
+                let sorvete = document.getElementById("sorvete").value;
+                let total = sorvete * preco;
+                document.getElementById("resposta").innerHTML = "O valor total foi R$"+total;
+                console.log(total);
+
+            })
+    </script>
+</body>
+</html>

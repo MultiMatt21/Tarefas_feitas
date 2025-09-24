@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+<body>
+    
+    <h1>Exercício 23</h1>
+    <label for="mesada">Quanto foste vossa mesada?</label>  <br>
+    <input type="text" id="mesada"><br>
+    <label for="mesada2">Quanto queres economizar?</label><br>
+    <input type="text" id="mesada2">
+    <button id="btn23">Calcular</button>
+    <p id="resposta23">A sua resposta aparecerá aqui</p>
+
+    <!-- Exercício 23 fim -->
+
+    <!-- exercício 24 começo -->
+     
+    <h1>Exercício 24</h1>
+    <label for="lanche">Qual o valor do lanche?</label><br>
+    <input type="text" id="lanche"><br>
+    <label for="lanche2">Quanto você economizou ?</label><br>
+    <input type="text" id="lanche2"><br>
+    <button id="btn24">Calcular</button><br>
+    <p id="resposta24">Sua resposta aparecerá aqui</p>
+
+    <!-- exercício 24 fim -->
+     <!-- exercício 25 começo -->
+
+    <h1>Exercício 25</h1>
+    <label for="balas">Balas</label><br>
+    <input type="text" id="balas"><br>
+    <label for="balas2">Amigos</label><br>
+    <input type="text" id="balas2"><br>
+    <button id="btn25">Calcular</button><br>
+    <p id="resposta25">Sua resposta aparecerá aqui</p>
+
+    <!-- exercício 25 fim -->
+     <!-- exercício 26 começo -->
+    
+    <h1>Exercício 26</h1>
+    <label for="dinheiroval">Qual será o valor do dinheiro a ser dividido?</label><br>
+    <input type="text" id="dinheiroval"><br>
+    <button id="btn26">Calcular</button><br>
+    <p id="dinheirovalp">Sua resposta aparecerá aqui</p>
+
+    <!-- exercício 26 fim -->
+    <!-- exercício 27 começo -->
+
+    <h1>Exercício 27</h1>
+    <label for="flores">Flores</label><br>
+    <input type="text" id="flores"><br>
+    <button id="btn27">Calcular</button><br>
+    <p id="resposta27">Sua resposta aparecerá aqui</p>
+
+    <!-- exercício 27 fim -->
+    <!-- exercício 28 começo -->
+
+    <h1>Exercício 28</h1>
+    <label for=""></label><br>
+    <input type="text"><br>
+    <button></button><br>
+    <p></p>
+
+    <!-- exercício 28 fim -->
+    <!-- exercício 29 começo -->
+
+    <h1>Exercício</h1>
+    <label for=""></label><br>
+    <input type="text"><br>
+    <button></button><br>
+    <p></p>
+
+    <!-- exercício 29 fim -->
+   
+
+
+
+    
+
+<script>
+    // Exercício 23 começo
+    btn23.addEventListener('click',function(){
+        let mesada = document.getElementById("mesada").value;
+        let economia = document.getElementById("mesada2").value;
+        let economia2 = mesada-economia
+        document.getElementById("resposta23").innerHTML =`O resto do valor será ${economia2}`
+        console.log(economia2);
+    })
+    // Exercício 23 fim
+    // Exercício 24 começo
+
+    btn24.addEventListener('click',function(){
+        let lanche = document.getElementById("lanche").value;
+        let lanche2 = document.getElementById("lanche2").value;
+        let lanche3 = lanche - lanche2;
+        document.getElementById("resposta24").innerHTML =`O valor restante foi ${lanche3}`
+        console.log(lanche3);
+        if(lanche3<0){
+            document.getElementById("resposta24").innerHTML =`Desculpe, ainda faltam ${lanche3} para pagar o lanche`
+            console.log(lanche3);
+        }
+    })
+
+    // Exercício 24 fim
+    // Exercício 25 começo
+
+    btn25.addEventListener('click',function(){
+        let balas = document.getElementById("balas").value;
+        let balas2 = document.getElementById("balas2").value;
+        let balas3 = balas/balas2;
+        document.getElementById("resposta25").innerHTML =`A divisão de balas será: ${balas3}`
+        console.log(balas3);
+        // if(balas3/){
+        //     document.getElementById("resposta25").innerHTML =`O valor foi ${balas3}, alguém vai ficar sem bala :/`
+        //     console.log(balas3);
+        // }
+    })
+
+    // Exercício 25 fim
+    // Exercício 26 começo
+
+        btn26.addEventListener('click',function(){
+            let dinheiroval = document.getElementById("dinheiroval").value;
+            let amigo1 = dinheiroval/7;
+            let amigo2 = amigo1*2
+            let amigo3 = amigo2*2.
+            
+            document.getElementById("dinheirovalp").innerHTML =`O valor que cada amigo receberá será ${amigo1.toFixed(2)}, ${amigo2.toFixed(2)} e ${amigo3.toFixed(2)}`
+            console.log("O valor que cada amigo receberá será "+amigo1+", "+amigo2+" e "+amigo3);
+        })
+
+    // Exercício 26 fim
+    // Exercício 27 começo
+    btn27.addEventListener('click',function(){
+    let flor = parseFloat(document.getElementById("flores").value);
+        let flor2 = flor*2
+        let flor3 = flor*3
+        let flor4 = flor*4
+        let flor5 = flor*5
+        document.getElementById("resposta27").innerHTML=`O número de flores no primeiro dia será ${flor}, no segundo dia será ${flor2}, no terceiro será ${flor3}, no quarto será ${flor4} e no quinto será ${flor5}.\nO total de flores serão ${flor+flor2+flor3+flor4+flor5}`
+
+    })
+
+    // Exercício 27 fim
+    // Exercício 28 começo
+
+</script>
+</body>
+</html>

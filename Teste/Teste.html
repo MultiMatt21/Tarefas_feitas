@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <h1>Teste</h1>
+    <label for="Segundos">INsira os segundos</label>
+    <input type="text" id="segundos">
+    <button id="btn">Enviar</button>
+    <p id="resposta">Sua resposta aparecerá aqui</p>
+
+    <script>
+        btn.addEventListener('click',function(){
+            let seg = document.getElementById('segundos').value;
+            let min = seg/60;
+            document.getElementById('resposta').innerHTML = `Em minutos sua respostá será ${min} em horas sua resposta será ${min/60}`
+        })
+    </script>
+</body>
+</html>
