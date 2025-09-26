@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .destacado{
+            color:red;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <p id="meup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, a temporibus cupiditate obcaecati, necessitatibus saepe, minima doloribus distinctio explicabo architecto amet accusamus est suscipit mollitia! Nesciunt est accusamus repellendus optio.</p>
+    <button id="btn">botão</button>
+    <button id="btn2">remove</button>
+
+    
+    <script>
+        let botao = document.getElementById("btn");
+        let paragrafo = document.getElementById("meup")
+        let botao2 = document.getElementById("btn2")
+
+        botao.addEventListener('click',function(){
+            meup.classList.add('destacado');
+            // meup.classList.remove('destacado')
+        })
+        botao2.addEventListener('click',function(){
+            meup.classList.remove('destacado')
+        })
+    </script>
+</body>
+</html>
