@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+        <h1>Exercício 31</h1>
+        <label for="ex31">insira um número</label>
+        <input type="text" id="ex31">
+        <button id="btn31">Enviar</button>
+        <p id="resposta31">Sua resposta aparecerá aqui</p>
+
+<!-- Exercício 31 fim  -->
+ 
+        <h1>Exercício 32</h1>
+        <label for="ex32">insira um número</label>
+        <input type="text" id="ex32">
+        <button id="btn32">Enviar</button>
+        <p id="resposta32">Sua resposta aparecerá aqui</p>
+
+<!-- Exercício 32 fim  -->
+<!-- Exercício 33 começo  -->
+
+        <h1>Exercício 33</h1>
+        <label for="ex33">insira um número</label>
+        <input type="text" id="ex33">
+        <button id="btn33">Enviar</button>
+        <p id="resposta33">Sua resposta aparecerá aqui</p>
+
+<!-- Exercício 33 fim  -->
+<!-- Exercício 34 começo  -->
+
+        <h1>Exercício 34</h1>
+        
+        <label for="ex34_1">insira um número</label>
+        <input type="text" id="ex34_1"><br>
+
+        <label for="ex34_2">insira um número</label>
+        <input type="text" id="ex34_2"><br>
+
+        <label for="ex34_3">insira um número</label>
+        <input type="text" id="ex34_3"><br>
+
+        <label for="ex34_4">insira um número</label>
+        <input type="text" id="ex34_4"><br>
+
+        <button id="btn34">Enviar</button>
+        <p id="resposta34">Sua resposta aparecerá aqui</p>
+
+        <!-- Exercício 34 fim -->
+        <!-- Exercício 35 começo -->
+
+        <h1>Exercício 35</h1>
+        <label for="ex35">Qual o raio da circunferéncia?</label>
+        <input type="text" id="ex35">
+        <button id="btn35">Enviar</button>
+        <p id="resposta35">Sua resposta aparecerá aqui</p>
+
+        
+
+        <script>
+            btn31.addEventListener('click',function(){
+                let num1 = Number(document.getElementById('ex31').value)
+                document.getElementById('resposta31').innerHTML = `A raiz quadrada de ${num1} é ${Math.pow(num1,1/2)}`
+            })
+            // Exercício 31 fim
+            // Exercício 32 começo
+            btn32.addEventListener('click',function(){
+                let num1 = Number(document.getElementById('ex32').value)
+                document.getElementById('resposta32').innerHTML = `O número digitado foi ${num1}\n
+                Seu valor elevado a 2 é ${Math.pow(num1,2)}\n
+                Seu valor elevado a 3 é ${Math.pow(num1,3)} `
+            })
+            // Exercício 32 fim
+            // Exercício 33 começo
+            btn33.addEventListener('click',function(){
+                let num1 = Number(document.getElementById('ex33').value)
+                document.getElementById('resposta33').innerHTML = `${num1}, sua raiz cúbica será ${Math.pow(num1,1/3).toFixed(2)} e sua raiz quadrada é ${Math.pow(num1,1/2).toFixed(2)}`
+            })
+            // Exercício 33 fim
+            // Exercício 34 começo
+            btn34.addEventListener('click',function(){
+                let num1 = Number(document.getElementById('ex34_1').value)
+                let num2 = Number(document.getElementById('ex34_2').value)
+                let num3 = Number(document.getElementById('ex34_3').value)
+                let num4 = Number(document.getElementById('ex34_4').value)
+
+                document.getElementById("resposta34").innerHTML = `A média ponderada desses números será ${(num1*1)+(num2*2)+(num3*3)+(num4*4)/(1+2+3+4)}`
+                
+            })
+            // Exercício 34 fim
+            // Exercício 35 começo
+            btn35.addEventListener('click',function(){
+                let raio = Number(document.getElementById('ex35').value)
+                let area = 
+               document.getElementById('resposta35').innerHTML = ``
+
+            })
+
+
+              
+
+
+        </script>
+</body>
+</html>
