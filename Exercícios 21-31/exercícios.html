@@ -60,10 +60,12 @@
     <!-- exercício 28 começo -->
 
     <h1>Exercício 28</h1>
-    <label for=""></label><br>
-    <input type="text"><br>
-    <button></button><br>
-    <p></p>
+    <label for="ex28_1">Número total</label><br>
+    <input type="text" id="ex28_1"><br>
+    <label for="ex28_2">Número gorgeta em %</label><br>
+    <input type="text" id="ex28_2"><br>
+    <button id="btn28">Enviar</button><br>
+    <p id="resposta28">Sua resposta aparecerá aqui</p>
 
     <!-- exercício 28 fim -->
     <!-- exercício 29 começo -->
@@ -75,6 +77,16 @@
     <p></p>
 
     <!-- exercício 29 fim -->
+    <!-- exercício 30 começo -->
+
+    <h1>Exercício</h1>
+    <label for=""></label><br>
+    <input type="text"><br>
+    <button></button><br>
+    <p></p>
+
+    <!-- exercício 30 fim -->
+
    
 
 
@@ -147,6 +159,29 @@
 
     // Exercício 27 fim
     // Exercício 28 começo
+    btn28.addEventListener('click',function(){
+        let num1= Number(document.getElementById("ex28_1").value);
+        let num2= Number(document.getElementById("ex28_2").value);
+        let porcentagem = num2/100;
+        let total = num1*porcentagem;
+        document.getElementById("resposta28").innerHTML=`${num1} - ${num2}% = ${total}`
+        
+
+    })
+    
+
+
+// Exercício 28 fim
+// Exercício 29 começo
+
+btn29.addEventListener('click',function(){
+    let num1 = Number(document.getElementById("ex29").value);
+    document.getElementById("resposta29").innerHTML=`10% desse número será ${num1*0.1}`
+})
+
+// Exercício 29 fim
+// Exercício 29 fim
+
 
 </script>
 </body>
