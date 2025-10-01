@@ -59,6 +59,30 @@
         <button id="btn35">Enviar</button>
         <p id="resposta35">Sua resposta aparecerá aqui</p>
 
+        <!-- Exercício 35 fim  -->
+        <!-- Exercício 36 começo -->
+
+        <h1>Exercício 36</h1>
+        <label for="ex36_1">Escreva um número</label>
+        <input type="text" id="ex36_1"><br>
+        <label for="ex36_2">Escreva um número</label>
+        <input type="text" id="ex36_2"><br>
+        <label for="ex36_3">Escreva um número</label>
+        <input type="text" id="ex36_3"><br>
+        <button id="btn36">Enviar</button>
+        <p id="resposta36">Sua resposta aparecerá aqui </p>
+
+        <h1>Exercício 37</h1>
+        <label for="">Escreva um número</label>
+        <input type="text" id=""><br>
+        <label for="">Escreva um número</label>
+        <input type="text" id=""><br>
+        <label for="">Escreva um número</label>
+        <input type="text" id=""><br>
+        <button id="">Enviar</button>
+        <p id="resposta37">Sua resposta aparecerá aqui </p>
+
+
         
 
         <script>
@@ -100,6 +124,24 @@
 
             })
 
+            // Exercício 35 fim
+            // Exercício 36 começo
+
+            btn36.addEventListener('click',function(){
+                let num1 = Number(document.getElementById('ex36_1').value)
+                let num2 = Number(document.getElementById('ex36_2').value)
+                let num3 = Number(document.getElementById('ex36_3').value)
+                document.getElementById("resposta36").innerHTML = `O volume será ${num1*num2*num3}`
+
+            })
+
+            //exercício 36 fim  
+            //exercício 37 começo 
+
+
+
+
+            
 
               
 
