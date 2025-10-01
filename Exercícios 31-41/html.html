@@ -73,19 +73,81 @@
         <p id="resposta36">Sua resposta aparecerá aqui </p>
 
         <h1>Exercício 37</h1>
-        <label for="">Escreva um número</label>
-        <input type="text" id=""><br>
-        <label for="">Escreva um número</label>
-        <input type="text" id=""><br>
-        <label for="">Escreva um número</label>
-        <input type="text" id=""><br>
-        <button id="">Enviar</button>
+        <label for="ex37_1">Escreva um número</label>
+        <input type="text" id="ex37_1"><br>
+        <label for="ex37_2">Escreva um número</label>
+        <input type="text" id="ex37_2"><br>
+        <label for="ex37_3">Escreva um número</label>
+        <input type="text" id="ex37_3"><br>
+        <button id="btn37">Enviar</button>
         <p id="resposta37">Sua resposta aparecerá aqui </p>
+
+        <!-- Exercício 37 fim -->
+        <!-- Exercício 38 começo -->
+         <h1>exercício 38</h1>
+
+        <label for="ex38_1">Qual a base do triângulo?</label>
+        <input type="text" id="ex38_1"><br>
+
+        <label for="ex38_2">Qual a altura do triangulo ?</label>
+        <input type="text" id="ex38_2"><br>
+
+        <label for="ex38_3">Qual a altura do prisma ?</label>
+        <input type="text" id="ex38_3"><br>
+        <button id="btn38">Enviar</button>
+        <p id="resposta38">Sua resposta aparecerá aqui </p>
+
+        <!-- Exercício 38 fim -->
+        <!-- Exercício 39 começo -->
+         
+         <h1>exercício 39</h1>
+
+        <label for="ex39_1">Qual o raio do primeiro círculo?</label>
+        <input type="text" id="ex39_1"><br>
+
+        <label for="ex39_2">Qual o raio do segundo círculo?</label>
+        <input type="text" id="ex39_2"><br>
+
+        <button id="btn39">Enviar</button>
+        <p id="resposta39">Sua resposta aparecerá aqui </p>
+
+        <!-- Exercício 39 fim -->
+        <!-- Exercício 40 começo-->
+
+        <h1>Exercício 40</h1>
+
+        <label for="ex40_1">Qual o raio do círculo?</label>
+        <input type="text" id="ex40_1"><br>
+
+        <label for="ex40_2">Qual a altura do cilindro?</label>
+        <input type="text" id="ex40_2"><br>
+
+        <button id="btn40">Enviar</button>
+        <p id="resposta40">Sua resposta aparecerá aqui</p>
+        
+        <!-- exercício 40 fim -->
+        <!-- exercício 41 começo -->
+         <!-- O último graças a deus -->
+         <h1>exercício 41</h1>
+
+        <label for="ex41_1">Qual o raio do círculo?</label>
+        <input type="text" id="ex41_1"><br>
+
+        <!-- <label for="ex41_2">Qual a altura do cilindro?</label>
+        <input type="text" id="ex41_2"><br> -->
+
+        <button id="btn41">Enviar</button>
+        <p id="resposta41">Sua resposta aparecerá aqui</p>
+
+
+        
+
 
 
         
 
         <script>
+            
             btn31.addEventListener('click',function(){
                 let num1 = Number(document.getElementById('ex31').value)
                 document.getElementById('resposta31').innerHTML = `A raiz quadrada de ${num1} é ${Math.pow(num1,1/2)}`
@@ -137,6 +199,70 @@
 
             //exercício 36 fim  
             //exercício 37 começo 
+
+            btn37.addEventListener('click',function(){
+                let num1 = Number(document.getElementById('ex37_1').value)
+                let num2 = Number(document.getElementById('ex37_2').value)
+                let num3 = Number(document.getElementById('ex37_3').value)
+                document.getElementById('resposta37').innerHTML = `A área de um trapézio(qualquer) será ${(num1+num2)*num3/2}`
+            })
+
+            // exercício 37 fim
+            // exercício 38 começo
+
+            btn38.addEventListener('click',function(){
+                let num1 = Number(document.getElementById('ex38_1').value)
+                let num2 = Number(document.getElementById('ex38_2').value)
+                let num3 = Number(document.getElementById('ex38_3').value)
+                let area = (num1*num2)/2
+                document.getElementById('resposta38').innerHTML = `A área do triângulo será ${(num1*num2)/2}\n
+                Então seu volume será ${area*num3}`
+            })
+            // exercício 38 fim
+            // exercício 39 começo
+
+            btn39.addEventListener('click',function(){
+                let num1 = Number(document.getElementById('ex39_1').value)
+                let num2 = Number(document.getElementById('ex39_2').value)
+                let area1= Math.pow(num1,2)*Math.PI.toFixed(2)
+                let area2= Math.pow(num2,2)*Math.PI.toFixed(2)
+                if(num1<num2){
+                    document.getElementById('resposta39').innerHTML = `O resultado dará negativo`
+                }else{
+
+                    document.getElementById('resposta39').innerHTML = `A área dos dois discos será ${area1} e ${area2}\n
+                    Agora meu belíssimo professor gostaria de ver a diferença de tamanho entre esses dois discos então aqui está, dignissimo: ${area1-area2}`
+                    
+                }
+
+            })
+
+            // Exercício 39 fim
+            // Exercício 40 começo
+
+            btn40.addEventListener('click',function(){
+                let raio = Number(document.getElementById('ex40_1').value)
+                let altura = Number(document.getElementById('ex40_2').value)
+                let area = Math.pow(raio,2)*Math.PI
+                document.getElementById('resposta40').innerHTML = `A área será ${area.toFixed(2)}\n
+                E o seu volume será ${area*altura.toFixed(2)}`
+            })
+
+            // Exercício 40 fim
+            // Exercício 41 começo
+
+            btn41.addEventListener('click',function(){
+                let raio = Number(document.getElementById('ex41_1').value)
+                let num2 = Number(document.getElementById('ex40_2').value)
+                let area = Math.pow(raio,2)*Math.PI*4
+                let volume = (Math.pow(raio,3)*4*Math.PI)/3
+
+                document.getElementById('resposta41').innerHTML = `A área da sua esfera será ${area.toFixed(2)} e o volume será ${volume.toFixed(2)}`
+            })
+           
+            
+
+
 
 
 
