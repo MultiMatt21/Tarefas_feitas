@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício</h1>
+ <label for="ex_1">Nùmero</label>
+ <input type="text"  id="ex_1">
+ <label for="ex_2">Nùmero</label>
+ <input type="text"  id="ex_2">
+ <button id="btn">Enviar</button>
+ <p class="resposta">Sua resposta aparecerá aqui</p>
+    <script>
+        btn.addEventListener('click',function(){
+            let num1 = Number(document.getElementById('ex_1').value)
+            let num2 = Number(document.getElementById('ex_2').value)
+
+            if (num1 %2 == 0) {
+                document.getElementById('resposta').innerHTML= "par"
+                
+            }else{
+                document.getElementById('resposta').innerHTML = "impar"
+            }
+            
+        })
+         
+   
+    </script>
+</body>
+</html>

@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    <div>
     <h1>Exercício 66</h1>
+<<<<<<< Updated upstream
     <p>Crie uma aplicação que receba três números. Exibir os três números informando se eles são positivos, negativos ou nulos (considereo número nulo se ele for igual a zero).
 Informar o maior número.</p>
  <label for=""></label>
@@ -17,7 +19,102 @@ Informar o maior número.</p>
  
     <script>
        
+=======
+    <label for="ex_1">Insira un número</label>
+    <input type="text" id="ex_1"><br>
+    <label for="ex_2">Insira un número</label>
+    <input type="text" id="ex_2"><br>
+    <label for="ex_3">Insira un número</label>
+    <input type="text" id="ex_3"><br>
+    <button id="btn66">Enviar</button>
+    <p id='resposta'></p>
+    <p id='resposta1'></p>
+    <p id='resposta2'></p>
+    <p id='resposta3'></p>
+    <hr>
+    </div>
+    <!-- Exercício 66 fim -->
+     <div>
+    <h1>Exercício 67</h1>
+    <label for="ex67_1">Digite um número</label><br>
+    <input type="text" id="ex67_1"><br>
+    <label for="ex67_2">Digite um número</label><br>
+    <input type="text" id="ex67_2"><br>
+    <button id="btn67">Enviar</button>
+    <p id="resposta67_1"></p>
+    <p id="resposta67_2"></p>
+    <p id="resposta67_3"></p>
+    <hr>
+    </div>
+    <!-- exercício 67 fim -->
+     <!-- Exercício 68 começo -->
+      <h1>Exercício 68</h1>
+      <label for="ex68_1">Digite um número</label><br>
+      <input type="text" id="ex68_1">
+      <label for="ex68_2">Digite um número</label><br>
+      <input type="text" id="ex68_2">
+      <label for="ex68_3">Digite um número</label><br>
+      <input type="text" id="ex68_3">
+      <button id="btn68">Enviar</button>
+      <p id="resposta68_1"></p>
+      <p id="resposta68_2"></p>
+      <!-- Exercício 68 fim -->
+  
+    <script>
+        // Exercício 66 começo
+        btn66.addEventListener('click', function(){
+            let num1 = Number(document.getElementById('ex_1').value)
+            let num2 = Number(document.getElementById('ex_2').value)
+            let num3 = Number(document.getElementById('ex_3').value)
+            document.getElementById('resposta').innerHTML = `O maior número é ${Math.max(num1,num2,num3)}`
+            if(num1<0){
+                document.getElementById('resposta1').innerHTML=`O número um é negativo`
+            }else{
+                document.getElementById('resposta1').innerHTML="O número um é positivo"
+            }
+            if(num2<0){
+                document.getElementById('resposta2').innerHTML="O número é negativo"
+            }else{
+                document.getElementById('resposta2').innerHTML="o número é positivo"
+            }
+            if(num3<0){
+                document.getElementById('resposta3').innerHTML="O terceiro número é negativo"
+            }else{
+                document.getElementById('resposta3').innerHTML="O número é positivo"
+            }
+        })
+        // Exercício 66 fim
+        // Exercício 67 começo
+      btn67.addEventListener('click', function(){
+          let num1= Number(document.getElementById('ex67_1').value)
+          let num2= Number(document.getElementById('ex67_2').value)
+          let adição = num1+num2
+         document.getElementById('resposta67_1').innerHTML = `A soma dos números será ${num1+num2}`
+         if(num1+num2>=10){
+            document.getElementById('resposta67_2').innerHTML = `A soma dos números ${num1 + " e " +num2} é maior ou igual a 10
+            Então: ${Math.cbrt(adição).toFixed(2)}`
+         }else{
+            document.getElementById('resposta67_3').innerHTML = `${num1 + " e " +num2}`
+             
+         }
+      })
+        // Exercício 67 fim
+        // Exercício 68 começo
+        btn68.addEventListener('click',function(){
+            let num1 = Number(document.getElementById('ex68_1').value)
+            let num2 = Number(document.getElementById('ex68_2').value)
+            let num3 = Number(document.getElementById('ex68_3').value)
+            let somaquadrado = Math.pow(num1,2)+Math.pow(num2,2)+Math.pow(num3,2)
+            document.getElementById('resposta68_1').innerHTML=`A soma dos quadrados será ${somaquadrado.toFixed(2)}`
+            if(somaquadrado%2==0){
+                document.getElementById('resposta68_2').innerHTML=`A soma dos quadrados é par`
+            }else{
+                document.getElementById('resposta68_2').innerHTML=`A soma dos quadrados é impar`
+            }
+        })
+
+        // Exercício 68 fim
+>>>>>>> Stashed changes
     </script>
-   </script> 
 </body>
 </html>
